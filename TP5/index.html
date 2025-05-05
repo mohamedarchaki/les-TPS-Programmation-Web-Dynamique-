@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>exercice 1</title>
+  <style>
+    body{
+      height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: orange;   
+    }
+    .contant{
+      display: flex
+;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 5px 10px 15px #333333a6;
+    min-width: 500px;
+    }
+    .boxs{
+        display: flex;
+    }
+    .box{
+        display: flex;
+    flex-direction: column;
+    margin: 20px;
+    justify-content: space-around;
+    }
+    .box input{
+      outline: none;
+    border: 1px solid #333333a6;
+    border-radius: 2px;
+    padding: 5px 10px;
+    margin: 11px 5px;
+    }
+    .box button{
+      color: white;
+    background: blue;
+    padding: 5px 10px;
+    border: none;
+    border: 5px;
+    font-size: 15px;
+    }
+    
+  </style>
+</head>
+<body>
+    <div class="contant">
+  <h1>Calculatrice</h1>
+        <div class="boxs">
+  <div class="box">
+    <input type="number" placeholder="Entrez le premier nombre" id="nbr1">
+    <input type="number" placeholder="Entrez le deuxième nombre" id="nbr2">
+    <button onclick="calcul()">Faire le calcul</button>
+  </div>
+
+  <div class="box-resultats">
+    <p>La somme est : <span id="somme"></span></p>
+    <p>La différence est : <span id="différence"></span></p>
+    <p>Le produit est : <span id="produit"></span></p>
+    <p>Le quotient est : <span id="quotient"></span></p>
+  </div>
+</div>
+</div>
+  <script>
+    function calcul() {
+      let a = parseFloat(document.getElementById('nbr1').value);
+      let b = parseFloat(document.getElementById('nbr2').value);
+      document.getElementById('somme').innerText = a + b;
+      document.getElementById('différence').innerText = a - b;
+      document.getElementById('produit').innerText = a * b;
+      document.getElementById('quotient').innerText = b !== 0 ? (a / b) : "Division par zero impossible";
+    }
+  </script>
+</body>
+</html>

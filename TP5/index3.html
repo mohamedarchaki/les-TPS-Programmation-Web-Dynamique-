@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>exercice 3</title>
+  <style>
+    body{
+      height: 100vh;
+      background:linear-gradient(90deg,red, orange);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    h1{
+      margin: 10px 20px;
+      color: white;
+      font-size: 50px;
+    }
+    button{
+      border: 2px solid white;
+      margin: 10px 20px;
+    border-radius: 5px;
+    padding: 10px 19px;
+    font-size: 18px;
+    background: #0606a3;
+    color: white;
+
+    }
+  </style>
+</head>
+<body>
+  <h1>Quiz</h1>
+  <button onclick="quiz()">Démarrer le Quiz</button>
+
+  <script>
+    const tblQuestion = [
+      ["Quelle est la capitale de maroc ?", "rabat"],
+      ["Combien de joueur en jeu dasn footballe?", "11"],
+      ["Quel est le résultat de 3 x 3 ?", "9"]
+    ];
+
+    function quiz() {
+      let bonnesReponses = 0;
+
+      for (let i = 0; i < tblQuestion.length; i++) {
+        let reponse = prompt(tblQuestion[i][0]);
+        if (reponse !== null && reponse === tblQuestion[i][1]) {
+          alert(" bon Réponse");
+          bonnesReponses++;
+        } else {
+          alert(" mal Réponse");
+        }
+      }
+
+      alert(`Vous avez répondu a ${bonnesReponses} questions sur ${tblQuestion.length}.`);
+    }
+  </script>
+</body>
+</html>

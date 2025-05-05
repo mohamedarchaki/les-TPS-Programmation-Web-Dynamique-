@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>exercice 2</title>
+  <style>
+    body{
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgb(238, 238, 238);
+
+    }
+    .box{
+      width: 100%;
+    padding: 10px 15px;
+    background: linear-gradient(45deg, #FF9800, #FF5722);
+    color: white;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 20px;
+    border: 1px solid white;
+    border-radius: 10px;
+      }
+      h1{
+        color: #333;
+        max-width: 300px;
+        text-align: center;
+      }
+      button{
+        width: 100%;
+      }
+  </style>
+</head>
+<body>
+  <div class="box">
+
+  
+  <h1>Click sur jouer pour comancire</h1>
+  <button onclick="troverNombre()">jouer</button>
+</div>
+  <script>
+    function troverNombre() {
+      const N = Math.floor(Math.random() * 10) + 1;
+      let a;
+      let c = 0;
+
+      do {
+        a = parseInt(prompt("Enter un nomber entre 1 et 10"));
+        c++;
+        if (a < N) {
+          alert("Tree petit !");
+        } else if (a > N) {
+          alert("Tree grand !");
+        }
+      } while (a !== N);
+
+      alert(`Bravo tu as trouve en ${c} esaye.`);
+    }
+  </script>
+</body>
+</html>
