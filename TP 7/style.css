@@ -1,0 +1,42 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(45deg, #FF5722, #ffcc03);
+}
+.home{
+
+}
+.form{
+    background: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 5px;
+}
+label{
+    font-size: 18px;
+    font-family: sans-serif;
+    margin: 7px;
+}
+input{
+    height: 30px;
+    border: 1px solid #b1b1b1ad;
+    border-radius: 2px;
+    padding: 2px 9px;
+}
+.genre{
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    justify-content: space-evenly;
+    margin: 10px 0px;
+}
+button{
+    background: #FF9800;
+    color: white;
+    font-size: 20px;
+    padding: 5px;
+    border: transparent;
+}
