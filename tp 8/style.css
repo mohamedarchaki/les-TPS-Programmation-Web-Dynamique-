@@ -1,0 +1,55 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: bisque;
+    height: 100vh;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 2px;
+    margin: 5px 10px;
+    background-color: rgb(243, 243, 243);
+    width: 300px;
+    height: 300px;
+    box-shadow: 1px 1px 18px 0px #3333334d;
+}
+
+input,textarea {
+    resize: none;
+    margin: 10px 10px;
+    padding: 5px 10px;
+    border: 1px solid #33333369;
+    outline: none;
+    border-radius: 2px;
+}
+
+span {
+        margin: 22px;
+        font-family: sans-serif;
+        font-weight: bold;
+}
+button,a{
+    display: block;
+    padding: 5px 15px;
+    background: #0202bf;
+    color: white;
+    font-weight: bold;
+    border: none;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    border-radius: 2px;
+    text-decoration: none;
+}
+select{
+        width: 180px;
+    padding: 5px 15px;
+    outline: none;
+    background: transparent;
+    border: 1px solid #33333369;
+}
